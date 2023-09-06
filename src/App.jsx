@@ -25,7 +25,7 @@ function App() {
         <Route path="contact" element={<LayoutContact />}>
           <Route path="faq" element={<Faq />} />
           <Route path="form" element={<Form />} />
-        </Route>
+        </Route>    
       </Route>
     )
   );
