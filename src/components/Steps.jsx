@@ -12,7 +12,7 @@ function Steps() {
           <div className="Home__content">
             <div className="text">    
               <span>{data.step}</span> 
-              <p>{data.title}</p>   
+              <p>{data.title}</p>
             </div>
           </div>
         </div>
