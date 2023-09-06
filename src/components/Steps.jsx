@@ -6,13 +6,13 @@ import index from "../constants/index";
 function Steps() {
   return (
     <>
-      {index.map((data) => (
+      {index.map((data) => ( 
         <div className="colume" key={uuid()}>
-          <img src={data.images} alt="home logo" className="Home__image" />
+          <img src={data.images} alt="home logo" className="Home__image" />  
           <div className="Home__content">
-            <div className="text">
-              <span>{data.step}</span>
-              <p>{data.title}</p>
+            <div className="text">    
+              <span>{data.step}</span> 
+              <p>{data.title}</p>   
             </div>
           </div>
         </div>
