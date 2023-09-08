@@ -10,7 +10,7 @@ function Steps() {
         <div className="colume" key={uuid()}>
           <img src={data.images} alt="home logo" className="Home__image" />  
           <div className="Home__content">
-            <div className="text">    
+            <div className="text">
               <span>{data.step}</span> 
               <p>{data.title}</p>
             </div>

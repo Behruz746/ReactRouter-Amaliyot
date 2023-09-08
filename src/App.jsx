@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Faq from "./pages/help/Faq";
 import Form from "./pages/help/Form";
+import PageNotFound from "./pages/pageErrorFound/PageNotFound";
 
 import "./sass/App.scss";
 import RootLyout from "./layout/RootLyout";
@@ -25,7 +26,9 @@ function App() {
         <Route path="contact" element={<LayoutContact />}>
           <Route path="faq" element={<Faq />} />
           <Route path="form" element={<Form />} />
-        </Route>    
+        </Route>
+
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     )
   );

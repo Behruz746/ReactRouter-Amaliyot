@@ -49,10 +49,16 @@
 }
 
 .item__link {
+    padding: 8px;
     font-size: 18px;
     font-weight: 600;
     color: #fff;
     transition: .2s linear;
+    border-radius: 4px;
+
+    &.active {
+        background-color: rgb(44, 41, 41);
+    }
 
     &:hover {
         color: #D0021BFF;
