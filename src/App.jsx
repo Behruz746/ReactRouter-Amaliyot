@@ -27,7 +27,6 @@ function App() {
           <Route path="faq" element={<Faq />} />
           <Route path="form" element={<Form />} />
         </Route>
-
         <Route path="*" element={<PageNotFound />} />
       </Route>
     )

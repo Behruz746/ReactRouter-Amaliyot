@@ -18,7 +18,16 @@
     border-radius: 5px;
     background-color: #2C2929FF;
     margin-top: 25px;
+}
 
+.map__content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    a {
+        color: #fff;
+    }
 }
 
 .App__footer {
