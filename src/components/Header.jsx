@@ -15,7 +15,7 @@ function Header() {
         <ul className="nav__list">
           <li className="list__items">
             <NavLink to="/" className="item__link">
-              Home
+              Home 
             </NavLink>
           </li>
           <li className="list__items">

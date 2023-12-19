@@ -1,10 +1,4 @@
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-  Route,
-  Outlet,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Pages
 import Home from "./pages/Home";
@@ -18,23 +12,49 @@ import RootLyout from "./layout/RootLyout";
 import LayoutContact from "./layout/LayoutContact";
 
 function App() {
-  const routes = createBrowserRouter(
-    createRoutesFromElements(
-      <Route path="/" element={<RootLyout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<LayoutContact />}>
-          <Route path="faq" element={<Faq />} />
-          <Route path="form" element={<Form />} />
-        </Route>
-        <Route path="*" element={<PageNotFound />} />
-      </Route>
-    )
-  );
+  // new React router -v 6.4 with object pathes ⭐✨
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLyout />,
+
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "contact",
+          element: <LayoutContact />,
+          children: [
+            {
+              path: "faq",
+              element: <Faq />,
+            },
+
+            {
+              path: "form",
+              element: <Form />,
+            },
+          ],
+        },
+
+        {
+          path: "*",
+          element: <PageNotFound />,
+        },
+      ],
+    },
+  ]);
 
   return (
     <div className="App">
-      <RouterProvider router={routes} />
+      <RouterProvider router={router} />
     </div>
   );
 }
